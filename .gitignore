@@ -1,0 +1,14 @@
+# Build outputs
+*.o
+*.elf
+*.bin
+*.map
+
+# Editor files
+.vscode/
+*.swp
+*~
+
+# Python
+__pycache__/
+*.pyc
