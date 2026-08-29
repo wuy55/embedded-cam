@@ -18,7 +18,7 @@ No Arduino. No ESP-IDF linked (read as reference only). No `esp-camera` — so t
 ## Status
 
 Original development ran November 2024 to February 2025. This repository was
-re-uploaded in February 2026 after I lost access to the original GitHub account,
+retrieved in February 2026 and reuploaded to this new GitHub account in July after I lost access to the original GitHub account,
 so the commit history begins then rather than at the start of the work.
 
 **Phase 0** (toolchain, USB passthrough, chip ID) and **Phase 1** (bare-metal blink) are done. Phase 1 is a complete, hand-written boot-to-`main`: a reset handler (`startup.S`) that brings up the C runtime, a linker script placing code in IRAM and data in DRAM, and a `main.c` that disables the watchdogs and blinks GPIO33 through raw register writes. The image is RAM-loaded; a flash boot via our own second-stage bootloader is next (Phase 2).
@@ -67,5 +67,3 @@ Later phases add `device/sensor/`, `device/isp/`, `device/threeA/`, the host-sid
 ## Project history
 
 The commit history starts fresh here — an earlier version lived on a GitHub account I lost access to, so the per-step history didn't carry over. The engineering is intact and documented in the source. Development continues from here.
-
-readme last updated: 02/06/2026
